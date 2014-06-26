@@ -1,0 +1,18 @@
+[user]
+	name = Robert Bollons
+	email = rob@robbollons.com
+[alias]
+	lg = log --graph --oneline --decorate
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = C:/Program Files (x86)/KDiff3/kdiff3.exe
+	keepBackup = false
+	tustExitCode = false
+[color]
+	ui = true
+[mergetool]
+	keepBackup = false
+	trustExitCode = false
+[grep]
+	lineNumber = true
