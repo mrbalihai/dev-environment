@@ -3,6 +3,7 @@
 	email = rob@robbollons.com
 [alias]
 	lg = log --graph --oneline --decorate
+    ctags = !.git/hooks/ctags
 [merge]
 	tool = vimdiff
     conflictstyle = diff3
@@ -14,3 +15,5 @@
 	trustExitCode = false
 [grep]
 	lineNumber = true
+[init]
+	templatedir = ~/.git_template

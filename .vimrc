@@ -1,9 +1,8 @@
 " -- VIMRC --
 
 " Easy Access Variables
-let colourscheme    = 'beauty256'
+let colourscheme    = 'Obsidian'
 let configpath      = '~/.vim/config/'
-
 
 " Disable VI compatability so the VIM enhancements work
 set nocompatible

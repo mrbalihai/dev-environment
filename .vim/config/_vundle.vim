@@ -13,7 +13,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/aspnet.vim'
+Plugin 'vim-scripts/svg.vim'
+Plugin 'OrangeT/vim-csharp'
 
 " Call after plugins to get vundle to do it's thing
 call vundle#end()

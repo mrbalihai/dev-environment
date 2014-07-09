@@ -13,3 +13,5 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Map Ctrl+E to toggle the file explorer
+map <silent> <C-n> :call ToggleVExplorer()<CR>
