@@ -1,0 +1,8 @@
+.ssh
+bin
+data
+settings
+.bash_history
+.gitconfig
+_viminfo
+.vim/bundles
