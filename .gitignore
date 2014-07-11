@@ -6,3 +6,4 @@ settings
 .gitconfig
 _viminfo
 .vim/bundle
+.cache

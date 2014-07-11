@@ -10,10 +10,13 @@ let g:netrw_liststyle = 3
 let g:netrw_sort_sequence = '[\/]$,*'
 
 " Use the previous window to open files in (like an IDE)
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 4 
 
 " Hide VIM swap files
 let g:netrw_list_hide= '.*\.swp$'
+
+" Set the width
+let g:netrw_winsize = 15 
 
 " If Vexplore is the only window remaining then close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:VexOpen") && b:VexOpen == 1) | q | endif
@@ -32,7 +35,7 @@ function! ToggleVExplorer()
       else
           unlet t:expl_buf_num
       endif
-      let b:VexOpen = 0 
+      let b:VexOpen = 0
   else
       exec '1wincmd w'
       Vexplore
