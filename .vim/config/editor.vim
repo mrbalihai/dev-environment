@@ -14,16 +14,21 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Make the search and such like case-insensitive
+set ignorecase
+
+" Show unwanted space
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
+
 " Syntax Higlighting
 syntax on
 
 " Line numbers
 set number
 
-" Enable the vim airline on start
+" Vim Airline
 set laststatus=2
-
-" Enable vim airline on the tabs
 let g:airline#extensions#tabline#enabled = 1
 
 " Get ctrlp to use the git ls-files to navigate the files
@@ -31,3 +36,15 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
 " Colour scheme
 exe 'colo '.colourscheme
+
+" NERDTree
+let NERDTreeMinimalUI   = 1
+let NERDTreeDirArrows   = 1
+let NERDTreeStatusLine  = 1
+
+" Limelight
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+let g:limelight_default_coefficient = 0.3

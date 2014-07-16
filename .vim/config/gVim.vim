@@ -24,3 +24,4 @@ let g:airline_symbols.linenr = "\u2b61"
 
 " gui colour scheme
 exe 'colo '.guicolourscheme
+

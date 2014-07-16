@@ -14,7 +14,8 @@ imap <left> <nop>
 imap <right> <nop>
 
 " Map Ctrl+E to toggle the file explorer
-map <silent> <C-n> :call ToggleVExplorer()<CR>
+" map <silent> <C-n> :call ToggleVExplorer()<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Make the backspace key delete on insert mode
 set backspace=indent,eol,start

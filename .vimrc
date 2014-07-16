@@ -1,8 +1,10 @@
 " -- VIMRC --
 
 " Easy Access Variables
-let colourscheme    = 'SummerFruit256'
-let guicolourscheme = 'SummerFruit'
+let colourscheme    = 'bubblegum'
+let guicolourscheme = 'bubblegum'
+
+let isWindows       = 1
 
 let plugins         = [
 \       'gmarik/Vundle.vim',
@@ -16,7 +18,12 @@ let plugins         = [
 \       'marijnh/tern_for_vim',
 \       'bling/vim-airline',
 \       'airblade/vim-gitgutter',
-\       'kien/ctrlp.vim'
+\       'kien/ctrlp.vim',
+\       'scrooloose/nerdtree',
+\       'heavenshell/vim-jsdoc',
+\       'junegunn/limelight.vim',
+\       'junegunn/goyo.vim',
+\       'Valloric/YouCompleteMe'
 \   ]
 
 let configpath      = '~/.vim/config/'
