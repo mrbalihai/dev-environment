@@ -8,38 +8,30 @@ if !has('gui_running')
     let &t_AF="\e[38;5;%dm"
 endif
 
-" Tab spacing
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
+" General Tweaks
+set smartindent                                     " Enable syntax aware indentation
+set tabstop=4                                       " How many spaces to use for tab spacing
+set shiftwidth=4                                    " How many spaces to use for indenting
+set expandtab                                       " Use spaces instead of tabs
+set ignorecase                                      " Make the search and such like case-insensitive
+set listchars=tab:>-,trail:~,extends:>,precedes:<   " Characters to use to highlight spaces
+set list                                            " Show spaces as a visual character
+set number                                          " Show line numbers
+set noeb vb t_vb=                                   " Disable the OS beep
 
-" Make the search and such like case-insensitive
-set ignorecase
-
-" Show unwanted space
-set listchars=tab:>-,trail:~,extends:>,precedes:<
-set list
-
-" Syntax Higlighting
-syntax on
-
-" Line numbers
-set number
+" Set the colour scheme
+exe 'colo '.colourscheme
 
 " Vim Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='hybrid'
 
 " Get ctrlp to use the git ls-files to navigate the files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 
-" Colour scheme
-exe 'colo '.colourscheme
-
 " NERDTree
 let NERDTreeMinimalUI   = 1
-let NERDTreeDirArrows   = 1
 let NERDTreeStatusLine  = 1
 
 " Limelight

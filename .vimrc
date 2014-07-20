@@ -4,8 +4,6 @@
 let colourscheme    = 'bubblegum'
 let guicolourscheme = 'bubblegum'
 
-let isWindows       = 1
-
 let plugins         = [
 \       'gmarik/Vundle.vim',
 \       'plasticboy/vim-markdown',
@@ -23,7 +21,8 @@ let plugins         = [
 \       'heavenshell/vim-jsdoc',
 \       'junegunn/limelight.vim',
 \       'junegunn/goyo.vim',
-\       'Valloric/YouCompleteMe'
+\       'Valloric/YouCompleteMe',
+\       'fatih/vim-go'
 \   ]
 
 let configpath      = '~/.vim/config/'
