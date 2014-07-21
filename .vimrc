@@ -1,8 +1,8 @@
 " -- VIMRC --
 
 " Easy Access Variables
-let colourscheme    = 'bubblegum'
-let guicolourscheme = 'bubblegum'
+let colourscheme    = 'tomorrow'
+let guicolourscheme = 'tomorrow'
 
 let plugins         = [
 \       'gmarik/Vundle.vim',
@@ -17,7 +17,6 @@ let plugins         = [
 \       'bling/vim-airline',
 \       'airblade/vim-gitgutter',
 \       'kien/ctrlp.vim',
-\       'scrooloose/nerdtree',
 \       'heavenshell/vim-jsdoc',
 \       'junegunn/limelight.vim',
 \       'junegunn/goyo.vim',
@@ -37,7 +36,7 @@ exe 'source' configpath.'keymap.vim'
 exe 'source' configpath.'netrw.vim'
 exe 'source' configpath.'syntax.vim'
 
-" Load gVim options
+" Load GUI options
 if has('gui_running')
-    exe 'source' configpath.'gVim.vim'
+    exe 'source' configpath.'gui.vim'
 endif

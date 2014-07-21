@@ -25,7 +25,10 @@ exe 'colo '.colourscheme
 " Vim Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='hybrid'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Get ctrlp to use the git ls-files to navigate the files
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
