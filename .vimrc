@@ -18,10 +18,7 @@ let plugins         = [
 \       'airblade/vim-gitgutter',
 \       'kien/ctrlp.vim',
 \       'heavenshell/vim-jsdoc',
-\       'junegunn/limelight.vim',
-\       'junegunn/goyo.vim',
-\       'Valloric/YouCompleteMe',
-\       'fatih/vim-go'
+\       'Valloric/YouCompleteMe'
 \   ]
 
 let configpath      = '~/.vim/config/'
@@ -35,6 +32,7 @@ exe 'source' configpath.'editor.vim'
 exe 'source' configpath.'keymap.vim'
 exe 'source' configpath.'netrw.vim'
 exe 'source' configpath.'syntax.vim'
+exe 'source' configpath.'plugins.vim'
 
 " Load GUI options
 if has('gui_running')
