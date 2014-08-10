@@ -20,4 +20,3 @@ set noeb vb t_vb=                                   " Disable the OS beep
 
 " Set the colour scheme
 exe 'colo '.colourscheme
-

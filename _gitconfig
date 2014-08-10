@@ -13,8 +13,6 @@
 [mergetool]
 	keepBackup = false
 	trustExitCode = false
-[credential]
-	helper = !'C:\\Users\\rbollons\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
 [grep]
 	lineNumber = true
 [init]

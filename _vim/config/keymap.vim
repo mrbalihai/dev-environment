@@ -18,3 +18,7 @@ map <silent> <C-n> :call ToggleVExplorer()<CR>
 
 " Make the backspace key delete on insert mode
 set backspace=indent,eol,start
+
+map <leader>n :bn<cr>
+map <leader>p :bp<cr>
+map <leader>d :bd<cr>
