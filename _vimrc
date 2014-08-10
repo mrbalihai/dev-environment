@@ -19,6 +19,7 @@ let plugins         = [
 \       'heavenshell/vim-jsdoc',
 \       'iandoe/vim-osx-colorpicker',
 \       'gorodinskiy/vim-coloresque',
+\       'derekwyatt/vim-scala',
 \       'Valloric/YouCompleteMe'
 \   ]
 
