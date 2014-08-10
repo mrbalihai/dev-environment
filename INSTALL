@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# Path to the _dotfiles dir
 dotfiles="$HOME/Dev/_dotfiles"
 
+# Create the symlinks
 echo "Linking dotfiles"
 ln -s $dotfiles/_bashrc ~/.bashrc
 ln -s $dotfiles/_vimrc ~/.vimrc
@@ -9,11 +11,24 @@ ln -s $dotfiles/_vim/config/ ~/.vim/config
 ln -s $dotfiles/_gitconfig ~/.gitconfig
 ln -s $dotfiles/_git_template/ ~/.git_template
 
+# If vundle isn't installed then pull it down from the repo
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     echo "Installing vundle"
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
+# Install the vim plugins
 echo "Installing vim plugins"
 vim +PluginInstall +qall
 
+# Install tern
+echo "Installing tern_for_vim"
+cd ~/.vim/bundle/tern_for_vim/ 
+npm install
+
+# Install YouCompleteMe
+echo "Installing YouCompleteMe"
+cd ~/.vim/bundle/YouCompleteMe/ 
+./install.sh
+
+cd $dotfiles
