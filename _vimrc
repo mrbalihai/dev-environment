@@ -1,8 +1,9 @@
 " -- VIMRC --
 
 " Easy Access Variables
-let colourscheme    = 'Hybrid'
-let guicolourscheme = 'Hybrid'
+let colourscheme    = 'github256'
+let guicolourscheme = 'github'
+let airlinetheme    = 'zenburn'
 let plugins         = [
 \       'gmarik/Vundle.vim',
 \       'plasticboy/vim-markdown',
@@ -20,6 +21,7 @@ let plugins         = [
 \       'iandoe/vim-osx-colorpicker',
 \       'gorodinskiy/vim-coloresque',
 \       'derekwyatt/vim-scala',
+\       'joedicastro/vim-github256',
 \       'Valloric/YouCompleteMe'
 \   ]
 

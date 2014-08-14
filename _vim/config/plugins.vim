@@ -24,13 +24,14 @@ let g:ycm_semantic_triggers =  {
 
 " Vim Airline
 set laststatus=2
+let g:airline_theme = airlinetheme
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 if !has('gui_running')
     let g:airline_left_sep = ''
     let g:airline_right_sep = ''
-endif 
+endif
 
 " CtrlP
 " Get ctrlp to use the git ls-files to navigate the files

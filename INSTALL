@@ -30,6 +30,6 @@ npm install
 # Install YouCompleteMe
 echo "Installing YouCompleteMe"
 cd ~/.vim/bundle/YouCompleteMe/ 
-./install.sh
+./install.sh --omnisharp-completer
 
 cd $dotfiles
