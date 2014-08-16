@@ -24,12 +24,18 @@ vim +PluginInstall +qall
 
 # Install tern
 echo "Installing tern_for_vim"
-cd ~/.vim/bundle/tern_for_vim/ 
+cd ~/.vim/bundle/tern_for_vim/
 npm install
 
 # Install YouCompleteMe
 echo "Installing YouCompleteMe"
-cd ~/.vim/bundle/YouCompleteMe/ 
-./install.sh --omnisharp-completer
+cd ~/.vim/bundle/YouCompleteMe/
+
+## if it is windows then compile YCM differently
+if [[ "$OSTYPE" == "msys" ]]; then
+    cmake -G "Visual Studio 11 Win64" . ./third_party/ycmd/cpp
+else
+    ./install.sh --omnisharp-completer
+fi
 
 cd $dotfiles
