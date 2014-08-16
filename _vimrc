@@ -22,6 +22,8 @@ let plugins         = [
 \       'gorodinskiy/vim-coloresque',
 \       'derekwyatt/vim-scala',
 \       'joedicastro/vim-github256',
+\       'mattn/webapi-vim',
+\       'mattn/gist-vim',
 \       'Valloric/YouCompleteMe'
 \   ]
 
