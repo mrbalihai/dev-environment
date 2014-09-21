@@ -14,3 +14,6 @@ function parse_git_branch() {
 
 #Displays as: user@host ~/path/to/dir (git branch)
 export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[33m\]\`parse_git_branch\`\[\e[m\]\n"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

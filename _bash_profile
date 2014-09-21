@@ -1,3 +1,3 @@
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:~/.bin/:$PATH
 export MONO_GAC_PREFIX="/usr/local"
 source ~/.bashrc

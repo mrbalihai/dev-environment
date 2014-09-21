@@ -1,7 +1,7 @@
 "-- KEY MAPPINGS --
 
 " Remap jj to the escape key for speedier way of escaping
-inoremap jj <Esc>
+" inoremap jj <Esc>
 
 " disable arrow keys
 map <up> <nop>

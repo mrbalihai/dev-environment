@@ -1,13 +1,12 @@
 " -- VIMRC --
 
 " Easy Access Variables
-let colourscheme    = 'github256'
-let guicolourscheme = 'github'
-let airlinetheme    = 'zenburn'
+let colourscheme    = 'monokai'
+let guicolourscheme = 'monokai'
+let airlinetheme    = 'hybrid'
 let plugins         = [
 \       'gmarik/Vundle.vim',
 \       'plasticboy/vim-markdown',
-\       'flazz/vim-colorschemes',
 \       'cakebaker/scss-syntax.vim',
 \       'tpope/vim-fugitive',
 \       'vim-scripts/svg.vim',
@@ -21,9 +20,9 @@ let plugins         = [
 \       'iandoe/vim-osx-colorpicker',
 \       'gorodinskiy/vim-coloresque',
 \       'derekwyatt/vim-scala',
-\       'joedicastro/vim-github256',
-\       'mattn/webapi-vim',
-\       'mattn/gist-vim',
+\       'vim-scripts/ASPJScript',
+\       'PProvost/vim-ps1',
+\       'sickill/vim-monokai',
 \       'Valloric/YouCompleteMe'
 \   ]
 

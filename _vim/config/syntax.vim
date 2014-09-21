@@ -9,3 +9,5 @@ au BufRead,BufNewFile *.aspx,*.asmx,*.ascx setf aspnet
 au BufNewFile,BufRead *.svg setf svg
 
 set completeopt-=preview
+
+let g:syntastic_html_tidy_ignore_errors = ["proprietary attribute \"ng-"]
