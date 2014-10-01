@@ -1,3 +1,7 @@
+if !has("gui_running")
+    finish
+endif
+
 " Hide toolbars
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -9,9 +13,6 @@ set vb t_vb=
 
 " Set font
 set guifont=Sauce_Code_Powerline:h16
-
-" gui colour scheme
-exe 'colo '.guicolourscheme
 
 "Enable the powerline symbols
 let g:airline_powerline_fonts = 1

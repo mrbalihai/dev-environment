@@ -1,5 +1,3 @@
-"-- MAP FILE EXTENSIONS TO SYNTAX HIGHLIGHTING --
-
 " Syntax Higlighting
 syntax on
 
@@ -7,7 +5,7 @@ syntax on
 au BufNewFile,BufRead *.json setf javascript
 au BufRead,BufNewFile *.aspx,*.asmx,*.ascx setf aspnet
 au BufNewFile,BufRead *.svg setf svg
+au BufNewFile,BufRead *.asp :set ft=aspjscript
 
 set completeopt-=preview
 
-let g:syntastic_html_tidy_ignore_errors = ["proprietary attribute \"ng-"]

@@ -11,6 +11,7 @@ ln -s $dotfiles/_vimrc ~/.vimrc
 ln -s $dotfiles/_vim/config/ ~/.vim/config
 ln -s $dotfiles/_gitconfig ~/.gitconfig
 ln -s $dotfiles/_git_template/ ~/.git_template
+ln -s $dotfiles/_tmux.conf ~/.tmux.conf
 
 # If vundle isn't installed then pull it down from the repo
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -23,19 +24,19 @@ echo "Installing vim plugins"
 vim +PluginInstall +qall
 
 # Install tern
-echo "Installing tern_for_vim"
-cd ~/.vim/bundle/tern_for_vim/
-npm install
+#echo "Installing tern_for_vim"
+#cd ~/.vim/bundle/tern_for_vim/
+#npm install
 
 # Install YouCompleteMe
-echo "Installing YouCompleteMe"
-cd ~/.vim/bundle/YouCompleteMe/
+#echo "Installing YouCompleteMe"
+#cd ~/.vim/bundle/YouCompleteMe/
 
 ## if it is windows then compile YCM differently
-if [[ "$OSTYPE" == "msys" ]]; then
-    cmake -G "Visual Studio 11 Win64" . ./third_party/ycmd/cpp
-else
-    ./install.sh --omnisharp-completer
-fi
+#if [[ "$OSTYPE" == "msys" ]]; then
+#    cmake -G "Visual Studio 11 Win64" . ./third_party/ycmd/cpp
+#else
+#    ./install.sh --omnisharp-completer
+#fi
 
-cd $dotfiles
+#cd $dotfiles
