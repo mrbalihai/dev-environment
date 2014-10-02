@@ -1,17 +1,22 @@
 #!/bin/bash
+lnif() {
+    if [ ! -e $2 ]; then
+        ln -s $1 $2
+    fi
+}
 
 # Path to the _dotfiles dir
 dotfiles="$HOME/Dev/_dotfiles"
 
 # Create the symlinks
 echo "Linking dotfiles"
-ln -s $dotfiles/_bashrc ~/.bashrc
-ln -s $dotfiles/_bash_profile ~/.bash_profile
-ln -s $dotfiles/_vimrc ~/.vimrc
-ln -s $dotfiles/_vim/config/ ~/.vim/config
-ln -s $dotfiles/_gitconfig ~/.gitconfig
-ln -s $dotfiles/_git_template/ ~/.git_template
-ln -s $dotfiles/_tmux.conf ~/.tmux.conf
+lnif $dotfiles/_bashrc ~/.bashrc
+lnif $dotfiles/_bash_profile ~/.bash_profile
+lnif $dotfiles/_vimrc ~/.vimrc
+lnif $dotfiles/_vim/config/ ~/.vim/config
+lnif $dotfiles/_gitconfig ~/.gitconfig
+lnif $dotfiles/_git_template/ ~/.git_template
+lnif $dotfiles/_tmux.conf ~/.tmux.conf
 
 # If vundle isn't installed then pull it down from the repo
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
@@ -22,21 +27,3 @@ fi
 # Install the vim plugins
 echo "Installing vim plugins"
 vim +PluginInstall +qall
-
-# Install tern
-#echo "Installing tern_for_vim"
-#cd ~/.vim/bundle/tern_for_vim/
-#npm install
-
-# Install YouCompleteMe
-#echo "Installing YouCompleteMe"
-#cd ~/.vim/bundle/YouCompleteMe/
-
-## if it is windows then compile YCM differently
-#if [[ "$OSTYPE" == "msys" ]]; then
-#    cmake -G "Visual Studio 11 Win64" . ./third_party/ycmd/cpp
-#else
-#    ./install.sh --omnisharp-completer
-#fi
-
-#cd $dotfiles
