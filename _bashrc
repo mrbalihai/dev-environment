@@ -1,19 +1,17 @@
-alias ls='ls -GCop'
+# Source additional scripts
+    source ~/bin/tmuxinator.bash
+    source ~/bin/git-prompt.sh
 
-# PS1----
-# get current branch in git repo
-function parse_git_branch() {
-    BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-    if [ ! "${BRANCH}" == "" ]
-    then
-        echo "(${BRANCH})"
-    else
-        echo ""
-    fi
-}
+# Aliases
+    alias ls='ls -GCop'
+    alias npm="cmd /c npm"
 
-#Displays as: user@host ~/path/to/dir (git branch)
-export PS1="\[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\] \[\e[33m\]\w\[\e[m\] \[\e[33m\]\`parse_git_branch\`\[\e[m\]\n"
+# ENV variables
+    export PKG_CONFIG_PATH="/lib/pkgconfig"
+    export COMSPEC=/c/Windows/System32/cmd.exe
+    export EDITOR='vim'
+    export TERM="xterm-256color"
+    export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(__git_ps1) \[\e[0m\] '$'\n\$ '
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+    PERL_MB_OPT="--install_base \"/c/Users/rbollons/perl5\""; export PERL_MB_OPT;
+    PERL_MM_OPT="INSTALL_BASE=/c/Users/rbollons/perl5"; export PERL_MM_OPT;
