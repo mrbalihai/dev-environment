@@ -17,6 +17,7 @@ lnif $dotfiles/_vim/config/ ~/.vim/config
 lnif $dotfiles/_gitconfig ~/.gitconfig
 lnif $dotfiles/_git_template/ ~/.git_template
 lnif $dotfiles/_tmux.conf ~/.tmux.conf
+lnif $dotfiles/_tmuxinator/ ~/.tmuxinator
 
 # If vundle isn't installed then pull it down from the repo
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then

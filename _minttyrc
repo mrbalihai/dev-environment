@@ -1,0 +1,13 @@
+BoldAsFont=yes
+Term=xterm-256color
+Font=Consolas for Powerline FixedD
+FontHeight=12
+CopyOnSelect=no
+Columns=157
+Rows=42
+Transparency=off
+FontSmoothing=default
+ClicksTargetApp=yes
+ClickTargetMod=off
+Scrollbar=none
+PgUpDnScroll=yes

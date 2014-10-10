@@ -18,6 +18,8 @@ set nocompatible
     Plugin 'PProvost/vim-ps1'
     Plugin 'vim-scripts/MS-SQL-Server-Syntax'
     Plugin 'othree/javascript-libraries-syntax.vim'
+    Plugin 'bryanthankins/vim-aspnetide'
+    Plugin 'vim-scripts/asp.net'
 
     " Integrations
     Plugin 'scrooloose/syntastic'
@@ -30,6 +32,7 @@ set nocompatible
     Plugin 'gorodinskiy/vim-coloresque'
     Plugin 'iandoe/vim-osx-colorpicker'
     Plugin 'airblade/vim-gitgutter'
+    Plugin 'scrooloose/nerdtree'
 
     " Colour Schemes
     Plugin 'sickill/vim-monokai'

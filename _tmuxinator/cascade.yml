@@ -1,0 +1,19 @@
+# ~/.tmuxinator/cascade.yml
+name: cascade
+root: ~/
+pre_window: source ~/.bash_profile
+windows:
+    - editor:
+        layout: 3722,213x51,0,0[213x40,0,0,0,213x10,0,41{139x10,0,41,3,73x10,140,41,4}]
+        panes:
+            - vim:
+                - cd ~/Dev/Cascade/uat
+                - vims cascade
+            - console:
+                - cd ~/Dev/Cascade/uat
+                - clear
+            - console:
+                - cd ~/Dev/Cascade/uat
+    - console:
+        - cd ~/Dev/Cascade/uat
+        - clear
