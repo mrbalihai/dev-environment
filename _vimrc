@@ -20,6 +20,7 @@ set nocompatible
     Plugin 'othree/javascript-libraries-syntax.vim'
     Plugin 'bryanthankins/vim-aspnetide'
     Plugin 'vim-scripts/asp.net'
+    Plugin 'ekalinin/Dockerfile.vim'
 
     " Integrations
     Plugin 'scrooloose/syntastic'

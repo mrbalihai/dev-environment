@@ -6,7 +6,7 @@ lnif() {
 }
 
 # Path to the _dotfiles dir
-dotfiles="$HOME/Dev/_dotfiles"
+dotfiles="~/.dotfiles"
 
 # Create the symlinks
 echo "Linking dotfiles"

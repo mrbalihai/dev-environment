@@ -12,3 +12,5 @@ set number                                          " Show line numbers
 set noeb vb t_vb=                                   " Disable the OS beep
 set ssop-=options                                   " Don't include local and global values when saving sessions
 set mouse-=a                                        " Disable the mouse
+
+autocmd InsertEnter,InsertLeave * set cul!
