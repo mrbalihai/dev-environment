@@ -1,5 +1,9 @@
 " Set the colour scheme
-colo monokai
+" colo monokai
+" colo distinguished
+" colo hybrid
+colo jellybeans
+"colo distinguished
 
 " General Tweaks
 set smartindent                                     " Enable syntax aware indentation

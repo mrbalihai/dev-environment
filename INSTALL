@@ -5,24 +5,33 @@ lnif() {
     fi
 }
 
-# Path to the _dotfiles dir
-dotfiles="~/.dotfiles"
+if [ -z $0 ]; then
+    dotfiles="$HOME/.dotfiles"
+else
+    dotfiles="$0"
+fi
+
+if [ -z $1 ]; then
+    homeDir="$HOME"
+else
+    homeDir="$1"
+fi
 
 # Create the symlinks
 echo "Linking dotfiles"
-lnif $dotfiles/_bashrc ~/.bashrc
-lnif $dotfiles/_bash_profile ~/.bash_profile
-lnif $dotfiles/_vimrc ~/.vimrc
-lnif $dotfiles/_vim/config/ ~/.vim/config
-lnif $dotfiles/_gitconfig ~/.gitconfig
-lnif $dotfiles/_git_template/ ~/.git_template
-lnif $dotfiles/_tmux.conf ~/.tmux.conf
-lnif $dotfiles/_tmuxinator/ ~/.tmuxinator
+lnif $dotfiles/_bashrc $homeDir/.bashrc
+lnif $dotfiles/_bash_profile $homeDir/.bash_profile
+lnif $dotfiles/_vimrc $homeDir/.vimrc
+lnif $dotfiles/_vim/config/ $homeDir/.vim/config
+lnif $dotfiles/_gitconfig $homeDir/.gitconfig
+lnif $dotfiles/_git_template/ $homeDir/.git_template
+lnif $dotfiles/_tmux.conf $homeDir/.tmux.conf
+lnif $dotfiles/_tmuxinator/ $homeDir/.tmuxinator
 
 # If vundle isn't installed then pull it down from the repo
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+if [ ! -d $homeDir/.vim/bundle/Vundle.vim ]; then
     echo "Installing vundle"
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    git clone https://github.com/gmarik/Vundle.vim.git $homeDir/.vim/bundle/Vundle.vim
 fi
 
 # Install the vim plugins

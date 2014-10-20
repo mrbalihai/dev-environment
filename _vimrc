@@ -1,4 +1,3 @@
-" Take vim out of vi compatability mode
 set nocompatible
 
 " <Vundle>
@@ -37,6 +36,10 @@ set nocompatible
 
     " Colour Schemes
     Plugin 'sickill/vim-monokai'
+    Plugin 'RobBollons/vim-distinguished'
+    Plugin 'whatyouhide/vim-gotham'
+    Plugin 'nanotech/jellybeans.vim'
+"    Plugin 'flazz/vim-colorschemes'
 
     " Completion
     Plugin 'ervandew/supertab'
