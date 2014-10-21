@@ -2,7 +2,7 @@ set nocompatible
 
 " <Vundle>
     filetype off
-    set rtp+=~/.vim/bundle/vundle.vim
+    set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
 
     " Bundle Manager
@@ -42,9 +42,9 @@ set nocompatible
 "    Plugin 'flazz/vim-colorschemes'
 
     " Completion
-    Plugin 'ervandew/supertab'
-"    Plugin 'marijnh/tern_for_vim'
-"    Plugin 'Valloric/YouCompleteMe'
+"    Plugin 'ervandew/supertab'
+    Plugin 'marijnh/tern_for_vim'
+    Plugin 'Valloric/YouCompleteMe'
 
     " Call after plugins to get vundle to do it's thing
     call vundle#end()
