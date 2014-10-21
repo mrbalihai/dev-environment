@@ -3,15 +3,10 @@
     source ~/bin/git-prompt.sh
 
 # Aliases
-    alias ls='ls -GCop'
-    alias npm="cmd /c npm"
+    alias ls='ls -op --group-directories-first --color=auto'
 
 # ENV variables
     export PKG_CONFIG_PATH="/lib/pkgconfig"
-    export COMSPEC=/c/Windows/System32/cmd.exe
     export EDITOR='vim'
     export TERM="xterm-256color"
     export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w$(__git_ps1) \[\e[0m\] '$'\n\$ '
-
-    PERL_MB_OPT="--install_base \"/c/Users/rbollons/perl5\""; export PERL_MB_OPT;
-    PERL_MM_OPT="INSTALL_BASE=/c/Users/rbollons/perl5"; export PERL_MM_OPT;

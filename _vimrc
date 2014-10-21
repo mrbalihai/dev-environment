@@ -42,9 +42,9 @@ set nocompatible
 "    Plugin 'flazz/vim-colorschemes'
 
     " Completion
-"    Plugin 'ervandew/supertab'
+    Plugin 'ervandew/supertab'
     Plugin 'marijnh/tern_for_vim'
-    Plugin 'Valloric/YouCompleteMe'
+"    Plugin 'Valloric/YouCompleteMe'
 
     " Call after plugins to get vundle to do it's thing
     call vundle#end()
