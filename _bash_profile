@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:~/bin:/c/Program\ Files\ \(x86\)/Mono-3.2.3/bin:$PATH
+export PATH=/usr/local/bin:~/.bin:$PATH
 export SHELLOPTS
 set -o igncr
 

@@ -43,7 +43,7 @@ set nocompatible
 
     " Completion
     Plugin 'ervandew/supertab'
-    Plugin 'marijnh/tern_for_vim'
+"    Plugin 'marijnh/tern_for_vim'
 "    Plugin 'Valloric/YouCompleteMe'
 
     " Call after plugins to get vundle to do it's thing
