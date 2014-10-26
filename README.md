@@ -1,4 +1,4 @@
-# My Dotfiles
+# My Dev Environment
 
 ## Installing (using my dockerfile)
 1. Install [docker](https://www.docker.com/)
