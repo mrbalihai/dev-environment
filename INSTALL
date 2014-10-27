@@ -1,0 +1,37 @@
+#!/bin/bash
+lnif() {
+    if [ ! -e $2 ]; then
+        ln -s $1 $2
+    fi
+}
+
+# Get the path to the current dir
+SCRIPT=$(readlink -f "$0")
+dotfiles=$(dirname "$SCRIPT")
+
+
+# Create the symlinks
+echo "Linking dotfiles"
+lnif $dotfiles/_bashrc ~/.bashrc
+lnif $dotfiles/_bash_profile ~/.bash_profile
+lnif $dotfiles/_vimrc ~/.vimrc
+lnif $dotfiles/_vim/config/ ~/.vim/config
+lnif $dotfiles/_gitconfig ~/.gitconfig
+lnif $dotfiles/_git_template/ ~/.git_template
+lnif $dotfiles/_tmux.conf ~/.tmux.conf
+lnif $dotfiles/_tmuxinator/ ~/.tmuxinator
+lnif $dotfiles/_minttyrc ~/.minttyrc
+
+# If vundle isn't installed then pull it down from the repo
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    echo "Installing vundle"
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
+
+# Install the vim plugins
+echo "Installing vim plugins"
+vim +PluginInstall +qall
+
+wget -O ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+wget -O ~/.tmuxinator.bash https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
+wget -O ~/.bin/vims https://gist.githubusercontent.com/RobBollons/9b00bcb1e171892dc0b6/raw/383f218fe5d92796b2e93e0d70f6aed8177aeac3/vims

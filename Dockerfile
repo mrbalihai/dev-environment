@@ -1,13 +1,11 @@
 FROM ubuntu:utopic
 MAINTAINER Rob Bollons <rob@robbollons.com>
 
-# Set the time zone
-RUN ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
-
 # Install dev tools
+    RUN apt-get update
     RUN apt-get install -y curl
 
-    # Set up node installation (runs apt-get update)
+    # Set up node installation
     RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 
     RUN apt-get install -y git
