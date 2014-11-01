@@ -12,7 +12,6 @@ set nocompatible
     Plugin 'plasticboy/vim-markdown'
     Plugin 'cakebaker/scss-syntax.vim'
     Plugin 'vim-scripts/svg.vim'
-    Plugin 'derekwyatt/vim-scala'
     Plugin 'vim-scripts/ASPJScript'
     Plugin 'PProvost/vim-ps1'
     Plugin 'vim-scripts/MS-SQL-Server-Syntax'
@@ -26,27 +25,16 @@ set nocompatible
     Plugin 'scrooloose/syntastic'
     Plugin 'tpope/vim-fugitive'
     Plugin 'heavenshell/vim-jsdoc'
-    Plugin 'godlygeek/tabular'
 
     " Interafce
     Plugin 'bling/vim-airline'
     Plugin 'kien/ctrlp.vim'
     Plugin 'gorodinskiy/vim-coloresque'
-    Plugin 'iandoe/vim-osx-colorpicker'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'scrooloose/nerdtree'
 
     " Colour Schemes
-    Plugin 'sickill/vim-monokai'
     Plugin 'RobBollons/vim-distinguished'
-"    Plugin 'whatyouhide/vim-gotham'
-    Plugin 'nanotech/jellybeans.vim'
-"    Plugin 'flazz/vim-colorschemes'
-
-    " Completion
-    Plugin 'ervandew/supertab'
-"    Plugin 'marijnh/tern_for_vim'
-"    Plugin 'Valloric/YouCompleteMe'
 
     " Call after plugins to get vundle to do it's thing
     call vundle#end()

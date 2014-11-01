@@ -1,5 +1,4 @@
 export PATH=/usr/local/bin:~/.bin:$PATH
 export SHELLOPTS
-set -o igncr
 
 source ~/.bashrc
