@@ -1,6 +1,7 @@
 # Source additional scripts
     source ~/.tmuxinator.bash
     source ~/.git-prompt.sh
+    source ~/.t-completion.sh
 
 # Aliases
     alias ls='ls -op --group-directories-first --color=auto'

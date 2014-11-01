@@ -4,17 +4,13 @@ root: ~/
 pre_window: source ~/.bash_profile
 windows:
     - editor:
-        layout: 3722,213x51,0,0[213x40,0,0,0,213x10,0,41{139x10,0,41,3,73x10,140,41,4}]
+        layout: f162,239x66,0,0{206x66,0,0[206x52,0,0,14,206x13,0,53,15],32x66,207,0,16}
         panes:
             - vim:
                 - cd ~/Dev/Cascade/uat
-                - vims cascade
             - console:
                 - cd ~/Dev/Cascade/uat
                 - clear
-            - console:
+            - twitter:
                 - cd ~/Dev/Cascade/uat
-                - irssi
-    - console:
-        - cd ~/Dev/Cascade/uat
-        - clear
+                - t stream timeline

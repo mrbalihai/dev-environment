@@ -1,9 +1,9 @@
 " Set the colour scheme
-colo monokai
+" colo monokai
 " colo distinguished
 " colo hybrid
 " colo jellybeans
-"colo distinguished
+colo distinguished
 
 " General Tweaks
 set smartindent                                     " Enable syntax aware indentation
@@ -15,6 +15,6 @@ set list                                            " Show spaces as a visual ch
 set number                                          " Show line numbers
 set noeb vb t_vb=                                   " Disable the OS beep
 set ssop-=options                                   " Don't include local and global values when saving sessions
-set mouse-=a                                        " Disable the mouse
+set mouse=a                                         " Enable the mouse
 
 autocmd InsertEnter,InsertLeave * set cul!

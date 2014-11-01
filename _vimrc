@@ -16,15 +16,17 @@ set nocompatible
     Plugin 'vim-scripts/ASPJScript'
     Plugin 'PProvost/vim-ps1'
     Plugin 'vim-scripts/MS-SQL-Server-Syntax'
-    Plugin 'othree/javascript-libraries-syntax.vim'
     Plugin 'bryanthankins/vim-aspnetide'
     Plugin 'vim-scripts/asp.net'
     Plugin 'ekalinin/Dockerfile.vim'
+    Plugin 'pangloss/vim-javascript'
+    Plugin 'mxw/vim-jsx'
 
     " Integrations
     Plugin 'scrooloose/syntastic'
     Plugin 'tpope/vim-fugitive'
     Plugin 'heavenshell/vim-jsdoc'
+    Plugin 'godlygeek/tabular'
 
     " Interafce
     Plugin 'bling/vim-airline'
@@ -37,7 +39,7 @@ set nocompatible
     " Colour Schemes
     Plugin 'sickill/vim-monokai'
     Plugin 'RobBollons/vim-distinguished'
-    Plugin 'whatyouhide/vim-gotham'
+"    Plugin 'whatyouhide/vim-gotham'
     Plugin 'nanotech/jellybeans.vim'
 "    Plugin 'flazz/vim-colorschemes'
 
