@@ -3,6 +3,7 @@ MAINTAINER Rob Bollons <rob@robbollons.com>
 
 # Install dev tools
     RUN apt-get update
+    RUN apt-get install -y sudo
     RUN apt-get install -y curl
 
     # Set up node installation
@@ -15,6 +16,7 @@ MAINTAINER Rob Bollons <rob@robbollons.com>
     RUN apt-get install -y openssh-server
     RUN apt-get install -y python-dev
     RUN apt-get install -y rubygems
+    RUN apt-get install -y ruby-dev
     RUN apt-get install -y nodejs
     RUN apt-get install -y build-essential
 
@@ -24,7 +26,7 @@ MAINTAINER Rob Bollons <rob@robbollons.com>
     RUN useradd -s /bin/bash -m -d /home/dev -g root dev
     RUN echo "dev:password" | chpasswd
     RUN echo "root:password" | chpasswd
-    RUN echo 'dev  ALL=(ALL:ALL) ALL' >> /etc/sudoers
+    RUN echo 'dev  ALL=NOPASSWD: ALL' >> /etc/sudoers
     ENV HOME /home/dev
     WORKDIR $HOME
 
@@ -109,13 +111,13 @@ MAINTAINER Rob Bollons <rob@robbollons.com>
     WORKDIR $HOME
 
 # Install node packages
-    RUN npm install -g gulp
-    RUN npm install -g jshint
-    RUN npm install -g mocha
+    RUN sudo npm install -g gulp
+    RUN sudo npm install -g jshint
+    RUN sudo npm install -g mocha
 
 # Install ruby packages
-    RUN gem install tmuxinator
-    RUN gem install t
+    RUN sudo gem install tmuxinator
+    RUN sudo gem install t
 
 # Open ports
     EXPOSE 22
