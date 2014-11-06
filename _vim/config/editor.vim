@@ -1,9 +1,11 @@
 " Set the colour scheme
+set background=dark
 " colo monokai
 " colo distinguished
 " colo hybrid
 " colo jellybeans
 colo distinguished
+" colo solarized
 
 " General Tweaks
 set smartindent                                     " Enable syntax aware indentation

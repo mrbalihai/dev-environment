@@ -6,6 +6,6 @@ windows:
     - main:
         layout: f162,239x66,0,0{206x66,0,0[206x52,0,0,14,206x13,0,53,15],32x66,207,0,16}
         panes:
-            - vim Dev/
+            - #empty
             - #empty
             - t stream timeline

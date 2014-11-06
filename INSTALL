@@ -32,6 +32,6 @@ fi
 echo "Installing vim plugins"
 vim +PluginInstall +qall
 
-wget -O ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-wget -O ~/.tmuxinator.bash https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
+wget -O ~/.bin/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+wget -O ~/.bin/.tmuxinator.bash https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
 wget -O ~/.bin/vims https://gist.githubusercontent.com/RobBollons/9b00bcb1e171892dc0b6/raw/383f218fe5d92796b2e93e0d70f6aed8177aeac3/vims

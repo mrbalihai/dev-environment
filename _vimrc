@@ -25,6 +25,7 @@ set nocompatible
     Plugin 'scrooloose/syntastic'
     Plugin 'tpope/vim-fugitive'
     Plugin 'heavenshell/vim-jsdoc'
+    Plugin 'editorconfig/editorconfig-vim'
 
     " Interafce
     Plugin 'bling/vim-airline'
