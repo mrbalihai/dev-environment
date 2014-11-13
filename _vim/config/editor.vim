@@ -1,3 +1,4 @@
+
 " Set the colour scheme
 set background=dark
 " colo monokai
@@ -18,5 +19,6 @@ set number                                          " Show line numbers
 set noeb vb t_vb=                                   " Disable the OS beep
 set ssop-=options                                   " Don't include local and global values when saving sessions
 set mouse-=a                                        " Disable the mouse
+set cm=blowfish2                                    " Change encryption method to blowfish 2
 
 autocmd InsertEnter,InsertLeave * set cul!

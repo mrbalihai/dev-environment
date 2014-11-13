@@ -19,13 +19,17 @@ set nocompatible
     Plugin 'vim-scripts/asp.net'
     Plugin 'ekalinin/Dockerfile.vim'
     Plugin 'pangloss/vim-javascript'
+    Plugin 'ingydotnet/yaml-vim'
     Plugin 'mxw/vim-jsx'
+    Plugin 'lervag/vim-latex'
 
     " Integrations
     Plugin 'scrooloose/syntastic'
     Plugin 'tpope/vim-fugitive'
     Plugin 'heavenshell/vim-jsdoc'
     Plugin 'editorconfig/editorconfig-vim'
+    Plugin 'jamessan/vim-gnupg'
+    Plugin 'godlygeek/tabular'
 
     " Interafce
     Plugin 'bling/vim-airline'
@@ -36,6 +40,9 @@ set nocompatible
 
     " Colour Schemes
     Plugin 'RobBollons/vim-distinguished'
+
+    " Code Completion
+    " Plugin 'marijnh/tern_for_vim'
 
     " Call after plugins to get vundle to do it's thing
     call vundle#end()

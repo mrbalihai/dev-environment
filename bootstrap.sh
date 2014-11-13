@@ -1,5 +1,6 @@
-#FROM debian:jessie
-#Rob Bollons <rob@robbollons.com>
+#!/usr/bin/env bash
+
+USERNAME = "vagrant"
 
 # Install dev tools
     apt-get update
@@ -20,46 +21,60 @@
     apt-get install -y nodejs
     apt-get install -y build-essential
 
+    # Install node packages
+    npm install -g gulp
+    npm install -g jshint
+    npm install -g mocha
+
+    # Install ruby packages
+    gem install tmuxinator
+    gem install t
+
 # Hook up my dotfiles
+    USER_HOME=$(getent passwd $USERNAME | cut -d: -f6)
+
     # clone the dotfiles
-    git clone https://github.com/RobBollons/dev-environment.git $HOME/.dev-environment
+    git clone https://github.com/RobBollons/dev-environment.git $USER_HOME/.dev-environment
 
     # Make the dir scructure
-    rm $HOME/.bashrc
-    mkdir $HOME/.vim
-    mkdir -p $HOME/.tmux/plugins
-    mkdir -p $HOME/.bin
+    rm $USER_HOME/.bashrc
+    mkdir -p $USER_HOME/.vim/bundle
+    mkdir -p $USER_HOME/.tmux/plugins
+    mkdir -p $USER_HOME/.bin
 
     # symlink the dotfiles from the repo
-    ln -s $HOME/.dev-environment/_bashrc $HOME/.bashrc
-    ln -s $HOME/.dev-environment/_bash_profile $HOME/.bash_profile
-    ln -s $HOME/.dev-environment/_vimrc $HOME/.vimrc
-    ln -s $HOME/.dev-environment/_vim/config/ $HOME/.vim/config
-    ln -s $HOME/.dev-environment/_gitconfig $HOME/.gitconfig
-    ln -s $HOME/.dev-environment/_git_template/ $HOME/.git_template
-    ln -s $HOME/.dev-environment/_tmux.conf $HOME/.tmux.conf
-    ln -s $HOME/.dev-environment/_tmuxinator/ $HOME/.tmuxinator
+    ln -s $USER_HOME/.dev-environment/_bashrc $USER_HOME/.bashrc
+    ln -s $USER_HOME/.dev-environment/_bash_profile $USER_HOME/.bash_profile
+    ln -s $USER_HOME/.dev-environment/_vimrc $USER_HOME/.vimrc
+    ln -s $USER_HOME/.dev-environment/_vim/config/ $USER_HOME/.vim/config
+    ln -s $USER_HOME/.dev-environment/_gitconfig $USER_HOME/.gitconfig
+    ln -s $USER_HOME/.dev-environment/_git_template/ $USER_HOME/.git_template
+    ln -s $USER_HOME/.dev-environment/_tmux.conf $USER_HOME/.tmux.conf
+    ln -s $USER_HOME/.dev-environment/_tmuxinator/ $USER_HOME/.tmuxinator
 
 # Arbitrary scripts
     # Git PS1 script
-    wget -O $HOME/.bin/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+    wget -O $USER_HOME/.bin/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 
     # tmuxinator completion
-    wget -O $HOME/.bin/tmuxinator.bash https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
+    wget -O $USER_HOME/.bin/tmuxinator.bash https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash
 
     # a script that helps easier session management in vim
-    wget -O $HOME/.bin/vims https://gist.githubusercontent.com/RobBollons/9b00bcb1e171892dc0b6/raw/383f218fe5d92796b2e93e0d70f6aed8177aeac3/vims
+    wget -O $USER_HOME/.bin/vims https://gist.githubusercontent.com/RobBollons/9b00bcb1e171892dc0b6/raw/383f218fe5d92796b2e93e0d70f6aed8177aeac3/vims
 
+    # t completion
+    wget -O $USER_HOME/.bin/t-completion.sh https://raw.githubusercontent.com/sferik/t/master/etc/t-completion.sh
 
 # Install tmux plugins
-    cd $HOME/.tmux/plugins
+    cd $USER_HOME/.tmux/plugins
     git clone https://github.com/tmux-plugins/tpm
     git clone https://github.com/tmux-plugins/tmux-resurrect
     git clone https://github.com/jimeh/tmux-themepack
 
 
 # Install and build Vim plugins
-    cd $HOME/.vim/bundle
+    cd $USER_HOME/.vim/bundle
+
     # Bundle Manager
     git clone https://github.com/gmarik/Vundle.vim.git
 
@@ -92,17 +107,4 @@
     # Colour schemes
     git clone https://github.com/RobBollons/vim-distinguished.git
 
-# Set permissions
-    chown -R dev $HOME
-
-# Run as the dev user
-    cd $HOME
-
-# Install node packages
-    sudo npm install -g gulp
-    sudo npm install -g jshint
-    sudo npm install -g mocha
-
-# Install ruby packages
-    sudo gem install tmuxinator
-    sudo gem install t
+    chown -R $USERNAME $USER_HOME

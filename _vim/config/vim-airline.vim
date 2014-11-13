@@ -6,4 +6,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-set laststatus=2
+" set laststatus=2
+
+" Seing how i get on without vim airline for a short while
+set laststatus=0
+let g:airline#extensions#tabline#enabled = 0
