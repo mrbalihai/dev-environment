@@ -1,11 +1,10 @@
 
 " Set the colour scheme
 set background=dark
-" colo monokai
-" colo distinguished
+colo distinguished
 " colo hybrid
 " colo jellybeans
-colo distinguished
+" colo monokai
 " colo solarized
 
 " General Tweaks

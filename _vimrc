@@ -40,6 +40,7 @@ set nocompatible
 
     " Colour Schemes
     Plugin 'RobBollons/vim-distinguished'
+    Plugin 'sickill/vim-monokai'
 
     " Code Completion
     " Plugin 'marijnh/tern_for_vim'
